@@ -4,11 +4,10 @@
         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.1/phpunit.xsd"
         colors="true"
         bootstrap="vendor/autoload.php"
-        stopOnFailure="true"
 >
     <testsuites>
         <testsuite name="Test Suite">
-            <folder>./tests</folder>
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
