@@ -1,0 +1,34 @@
+{
+    "name": "unity/reflector",
+    "description": "Unity reflection helper package",
+    "version": "0.2",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/unity-framework/reflector",
+    "support": {
+        "email": "eleandro@inbox.ru",
+        "issue": "https://github.com/unity-framework/reflector/issues/new"
+    },
+    "authors": [
+        {
+            "name": "Eleandro Duzentos",
+            "email": "eleandro@inbox.ru",
+            "homepage": "https://github.com/e200",
+            "role": "developer"
+        },
+        {
+            "name": "Unity framework",
+            "homepage": "https://github.com/unity-framework",
+            "role": "organization"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Unity\\Reflector\\": "src"
+        }
+    }
+}
