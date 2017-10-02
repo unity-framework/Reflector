@@ -1,7 +1,7 @@
 {
     "name": "unity/reflector",
     "description": "Unity reflection helper package",
-    "version": "0.1",
+    "version": "0.2",
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/unity-framework/reflector",
