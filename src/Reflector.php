@@ -40,7 +40,7 @@ class Reflector
     *
     * @param \ReflectionMethod|\ReflectionProperty $reflectionObject
     */
-   public function makeAccessibleIfInaccessible($reflectionObject)
+   public function makeAccessibleIfNot($reflectionObject)
    {
        if (!$this->isAccessible($reflectionObject)) {
            $this->makeAccessible($reflectionObject);
