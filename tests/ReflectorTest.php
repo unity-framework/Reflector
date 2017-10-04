@@ -37,12 +37,12 @@ class ReflectorTest extends TestCase
         $this->assertTrue($reflectedInaccessibleMethod->invoke($instance));
     }
 
-    function testMakeAccessibleIfInaccessible()
+    function testMakeAccessibleIfNot()
     {
         $reflector = $this->getReflector();
         $reflectedInaccessibleMethod = $this->getReflectedMethod();
 
-        $reflector->makeAccessibleIfInaccessible($reflectedInaccessibleMethod);
+        $reflector->makeAccessibleIfNot($reflectedInaccessibleMethod);
 
         ////////////////////
         // It's necessary //
