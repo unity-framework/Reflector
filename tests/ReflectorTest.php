@@ -9,7 +9,7 @@ class ReflectorTest extends TestCase
 {
     function testReflect()
     {
-        $this->assertInstanceOf(ReflectionClass::class, Reflector::reflect(Yomi::class));
+        $this->assertInstanceOf(ReflectionClass::class, (new Reflector)->reflect(Yomi::class));
     }
 
     function testIsAccessible()

@@ -18,7 +18,7 @@ class Reflector
      *
      * @return ReflectionClass
      */
-   public static function reflect($class)
+   public function reflect($class)
    {
        return new ReflectionClass($class);
    }
