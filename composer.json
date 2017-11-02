@@ -22,10 +22,17 @@
             "role": "organization"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
     "require-dev": {
         "phpunit/phpunit": "^6.2"
     },
+    "repositories": [
+        {
+          "type": "vcs",
+          "url": "../contracts"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Unity\\Reflector\\": "src"
@@ -35,5 +42,8 @@
 	    "psr-4": {
             "Tests\\Helpers\\": "tests"
 	    }
+    },
+    "require": {
+        "unity/contracts": "dev-master"
     }
 }
