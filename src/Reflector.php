@@ -3,13 +3,14 @@
 namespace Unity\Reflector;
 
 use ReflectionClass;
+use Unity\Contracts\Reflector\IReflector;
 
 /**
 * Class Reflector.
 *
 * @author Eleandro Duzentos <eleandro@inbox.ru>
 */
-class Reflector
+class Reflector implements IReflector
 {
     /**
      * Makes a new ReflectionClass instance.
