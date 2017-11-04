@@ -4,8 +4,7 @@ namespace Tests\Helpers;
 
 class Star
 {
-    function __construct($name)
+    public function __construct($name)
     {
-        
     }
 }
