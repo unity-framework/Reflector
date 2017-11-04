@@ -1,18 +1,18 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Unity\Reflector\Reflector;
 use Tests\Helpers\Star;
 use Tests\Helpers\Yomi;
+use Unity\Reflector\Reflector;
 
 class ReflectorTest extends TestCase
 {
-    function testReflect()
+    public function testReflect()
     {
-        $this->assertInstanceOf(ReflectionClass::class, (new Reflector)->reflect(Yomi::class));
+        $this->assertInstanceOf(ReflectionClass::class, (new Reflector())->reflect(Yomi::class));
     }
 
-    function testIsAccessible()
+    public function testIsAccessible()
     {
         $reflector = $this->getReflector();
         $reflectedMethod = $this->getReflectedMethod();
@@ -22,7 +22,7 @@ class ReflectorTest extends TestCase
         $this->assertTrue($reflector->isAccessible($reflectedProperty));
     }
 
-    function testMakeAccessible()
+    public function testMakeAccessible()
     {
         $reflector = $this->getReflector();
         $reflectedInaccessibleMethod = $this->getReflectedMethod();
@@ -37,7 +37,7 @@ class ReflectorTest extends TestCase
         $this->assertTrue($reflectedInaccessibleMethod->invoke($instance));
     }
 
-    function testMakeAccessibleIfNot()
+    public function testMakeAccessibleIfNot()
     {
         $reflector = $this->getReflector();
         $reflectedInaccessibleMethod = $this->getReflectedMethod();
@@ -52,7 +52,7 @@ class ReflectorTest extends TestCase
         $this->assertTrue($reflectedInaccessibleMethod->invoke($instance));
     }
 
-    function testHasRequiredParams()
+    public function testHasRequiredParams()
     {
         $reflector = $this->getReflector();
 
@@ -63,7 +63,7 @@ class ReflectorTest extends TestCase
         $this->assertTrue($reflector->hasRequiredParams($reflectedClass));
     }
 
-    function testHasConstructor()
+    public function testHasConstructor()
     {
         $reflector = $this->getReflector();
 
@@ -74,7 +74,7 @@ class ReflectorTest extends TestCase
         $this->assertTrue($reflector->hasConstructor($reflectedClass));
     }
 
-    function testGetConstructorParameters()
+    public function testGetConstructorParameters()
     {
         $reflector = $this->getReflector();
 
@@ -86,31 +86,31 @@ class ReflectorTest extends TestCase
         $this->assertInstanceOf(ReflectionParameter::class, reset($constructorParameters));
     }
 
-    function getReflectedClass()
+    public function getReflectedClass()
     {
         return new ReflectionClass(Yomi::class);
     }
 
-    function getReflectedMethod()
+    public function getReflectedMethod()
     {
         $reflectedClass = $this->getReflectedClass();
 
         return $reflectedClass->getMethod('isNickName');
     }
 
-    function getReflectedProperty()
+    public function getReflectedProperty()
     {
         $reflectedClass = $this->getReflectedClass();
 
         return $reflectedClass->getProperty('name');
     }
 
-    function getReflector()
+    public function getReflector()
     {
         return new Reflector();
     }
 
-    function getYomi()
+    public function getYomi()
     {
         return new Yomi();
     }
