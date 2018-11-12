@@ -42,8 +42,5 @@
 	    "psr-4": {
             "Tests\\Helpers\\": "tests"
 	    }
-    },
-    "require": {
-        "unity/contracts": "dev-master"
     }
 }
