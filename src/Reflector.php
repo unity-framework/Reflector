@@ -3,7 +3,7 @@
 namespace Unity\Reflector;
 
 use ReflectionClass;
-use Unity\Contracts\Reflector\IReflector;
+use Unity\Reflector\Contracts\IReflector;
 
 /**
  * Class Reflector.
